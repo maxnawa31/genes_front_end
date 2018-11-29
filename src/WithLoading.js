@@ -1,13 +1,7 @@
 import React from 'react';
 import Loader from './Loader';
-const WithLoading = Component => {
-  return function WithLoadingComponent({ loading, ...props }) {
-    if (!loading) {
-      return <Component {...props} />;
-    } else {
-      return <Loader />;
-    }
-  };
+const WithLoading = Component => ({ loading, ...props }) => {
+  return !loading ? <Component {...props} /> : <Loader />;
 };
 
 export default WithLoading;

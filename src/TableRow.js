@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyledRow } from './StyledComponents';
 
-const SearchResultsRow = props => {
+const TableRow = props => {
   return <StyledRow>{props.children}</StyledRow>;
 };
 
-export default SearchResultsRow;
+export default TableRow;

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import SearchResultsTable from './SearchResultsTable';
-import SearchResultsHeader from './SearchResultsHeader';
-import SearchResultsRow from './SearchResultsRow';
-import SearchResultsData from './SearchResultsData';
+import Table from './Table';
+import TableHeader from './TableHeader';
+import TableRow from './TableRow';
+import TableData from './TableData';
 
 const SearchResults = props => {
   return (
-    <SearchResultsTable>
-      <SearchResultsRow>
-        <SearchResultsHeader header={'GENE'} />
-        <SearchResultsHeader header={'NUCLEOTIDE CHANGE'} />
-        <SearchResultsHeader header={'PROTEIN CHANGE'} />
-        <SearchResultsHeader header={'ALIAS'} />
-        <SearchResultsHeader header={'REGION'} />
-        <SearchResultsHeader header={'REPORTED CLASSIFICATION'} />
-        <SearchResultsHeader header={'LAST EVALUATED'} />
-        <SearchResultsHeader header={'LAST UPDATED'} />
-        <SearchResultsHeader header={'MORE INFO'} />
-      </SearchResultsRow>
+    <Table>
+      <TableRow>
+        <TableHeader header={'GENE'} />
+        <TableHeader header={'NUCLEOTIDE CHANGE'} />
+        <TableHeader header={'PROTEIN CHANGE'} />
+        <TableHeader header={'ALIAS'} />
+        <TableHeader header={'REGION'} />
+        <TableHeader header={'REPORTED CLASSIFICATION'} />
+        <TableHeader header={'LAST EVALUATED'} />
+        <TableHeader header={'LAST UPDATED'} />
+        <TableHeader header={'MORE INFO'} />
+      </TableRow>
       {props.results.map((result, i) => {
         const {
           Gene: gene,
@@ -31,20 +31,20 @@ const SearchResults = props => {
           'More Info': moreInfo
         } = result;
         return (
-          <SearchResultsRow key={i}>
-            <SearchResultsData data={gene} />
-            <SearchResultsData data={nucleotide} />
-            <SearchResultsData data={proteinChange} />
-            <SearchResultsData data={alias} />
-            <SearchResultsData data={region} />
-            <SearchResultsData data={classification} />
-            <SearchResultsData data={lastEval} />
-            <SearchResultsData data={lastUpdated} />
-            <SearchResultsData data={moreInfo} />
-          </SearchResultsRow>
+          <TableRow key={i}>
+            <TableData data={gene} />
+            <TableData data={nucleotide} />
+            <TableData data={proteinChange} />
+            <TableData data={alias} />
+            <TableData data={region} />
+            <TableData data={classification} />
+            <TableData data={lastEval} />
+            <TableData data={lastUpdated} />
+            <TableData data={moreInfo} />
+          </TableRow>
         );
       })}
-    </SearchResultsTable>
+    </Table>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledTable } from './StyledComponents';
 
-const SearchResultsTable = props => {
+const Table = props => {
   return (
     <StyledTable>
       <tbody>{props.children}</tbody>
@@ -9,4 +9,4 @@ const SearchResultsTable = props => {
   );
 };
 
-export default SearchResultsTable;
+export default Table;
