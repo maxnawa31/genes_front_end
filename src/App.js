@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SearchForm from './SearchForm';
+import SearchResults from './SearchResults';
+import WithLoading from './WithLoading';
+
+const SearchResultsWithLoading = WithLoading(SearchResults);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      suggestedGenes: [],
+      searchResults: [],
+      loading: false
+    };
+  }
+
+  handleSuggestedGenes = keyword => {
+    fetch(`http://localhost:5000/search/${keyword}`).then(res =>
+      res.json().then(data => this.setState({ suggestedGenes: data }))
+    );
+  };
+  handleSearchResults = keyword => {
+    this.setState({loading: true})
+    fetch(`http://localhost:5000/genes/${keyword}`).then(res =>
+      res.json().then(data => this.setState({ searchResults: data, loading:false, suggestedGenes: [] }))
+    );
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SearchForm
+          handleSearchResults={this.handleSearchResults}
+          suggestedGenes={this.state.suggestedGenes}
+          handleSuggestedGenes={this.handleSuggestedGenes}
+        />
+        <SearchResultsWithLoading
+          loading={this.state.loading}
+          results={this.state.searchResults}
+        />
       </div>
     );
   }
