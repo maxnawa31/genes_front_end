@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import  SuggestedGenes  from './SuggestedGenes';
-import {StyledInput} from './StyledComponents';
+import SuggestedGenes from './SuggestedGenes';
+import { StyledInput } from './StyledComponents';
 
 class SearchForm extends Component {
   constructor(props) {

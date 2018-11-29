@@ -49,6 +49,4 @@ export const StyledRow = styled.tr`
   background-color: #58f0b4;
 `;
 
-export const StyledTableData = styled.th`
-
-`
+export const StyledTableData = styled.th``;

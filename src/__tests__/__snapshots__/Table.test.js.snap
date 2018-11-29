@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table/> matches the snapshot 1`] = `
+<table
+  className="sc-EHOje eKPvmx"
+>
+  <tbody />
+</table>
+`;
+
+exports[`<TableData/> matches the snapshot 1`] = `
+<th
+  className="sc-gzVnrw ibZhkv"
+/>
+`;
+
+exports[`<TableHeader/> matches the snapshot 1`] = `
+<th
+  className="sc-gzVnrw ibZhkv"
+/>
+`;
+
+exports[`<TableRow/> matches the snapshot 1`] = `
+<tr
+  className="sc-bZQynM hyBRIN"
+/>
+`;

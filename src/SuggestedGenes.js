@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { StyledDiv, StyledUl, StyledLi } from './StyledComponents';
 
 const SuggestedGenes = props => {
