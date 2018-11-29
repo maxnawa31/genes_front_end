@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import SuggestedGenes from './SuggestedGenes';
-import styled from 'styled-components';
+import  SuggestedGenes  from './SuggestedGenes';
+import {StyledInput} from './StyledComponents';
 
-const StyledInput = styled.input`
-  width: 300px;
-  height: 20px;
-`;
 class SearchForm extends Component {
   constructor(props) {
     super(props);

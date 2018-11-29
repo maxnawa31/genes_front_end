@@ -23,9 +23,11 @@ class App extends Component {
     );
   };
   handleSearchResults = keyword => {
-    this.setState({loading: true})
+    this.setState({ loading: true, suggestedGenes: [] });
     fetch(`http://localhost:5000/genes/${keyword}`).then(res =>
-      res.json().then(data => this.setState({ searchResults: data, loading:false, suggestedGenes: [] }))
+      res
+        .json()
+        .then(data => this.setState({ searchResults: data, loading: false }))
     );
   };
 

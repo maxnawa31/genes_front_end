@@ -1,17 +1,12 @@
 import React from 'react';
-import SearchResultsHeader from './SearchResultsHeader';
-import styled from 'styled-components';
+import { StyledTable } from './StyledComponents';
 
-const SearchResultsTable = (props) => {
-  return(
-    <table>
-      <tbody>
-      {props.children}
-      </tbody>
-    </table>
-
-
-  )
-}
+const SearchResultsTable = props => {
+  return (
+    <StyledTable>
+      <tbody>{props.children}</tbody>
+    </StyledTable>
+  );
+};
 
 export default SearchResultsTable;

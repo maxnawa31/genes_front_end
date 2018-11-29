@@ -1,15 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import { StyledHeader } from './StyledComponents';
 
-const StyledHeader = styled.th`
-  padding: 10px;
-`
-const SearchResultsHeader = (props) => {
-  return (
-    <StyledHeader>
-      {props.header}
-    </StyledHeader>
-  )
-}
+const SearchResultsHeader = props => {
+  return <StyledHeader>{props.header}</StyledHeader>;
+};
 
 export default SearchResultsHeader;

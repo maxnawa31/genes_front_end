@@ -1,15 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import {StyledTableData} from './StyledComponents'
 
-const StyledTableData = styled.td`
-
-`
-const SearchResultsData = (props) => {
-  return (
-    <StyledTableData>
-      {props.data}
-    </StyledTableData>
-  )
-}
+const SearchResultsData = props => {
+  return <StyledTableData>{props.data}</StyledTableData>;
+};
 
 export default SearchResultsData;
