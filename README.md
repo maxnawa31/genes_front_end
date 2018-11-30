@@ -14,7 +14,7 @@ Installs the required dependencies<br>
 to start webpack on port 3001<br>
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-Simultaneously, you must run the backend server on port 5000<br>
+Simultaneously, you must run the backend server, which will run on PORT 5000.<br>
 
 
 ### `npm test`
