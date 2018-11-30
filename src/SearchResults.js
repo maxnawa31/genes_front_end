@@ -2,7 +2,7 @@ import React from 'react';
 import Table from './Table';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
-import TableData from './TableData';
+import TableData, { TableDataLink } from './TableData';
 
 const SearchResults = props => {
   return (
@@ -28,7 +28,7 @@ const SearchResults = props => {
           'Reported Classification': classification,
           'Last Evaluated': lastEval,
           'Last Updated': lastUpdated,
-          'More Info': moreInfo
+          URL: moreInfo
         } = result;
         return (
           <TableRow key={i}>
@@ -40,7 +40,7 @@ const SearchResults = props => {
             <TableData data={classification} />
             <TableData data={lastEval} />
             <TableData data={lastUpdated} />
-            <TableData data={moreInfo} />
+            <TableDataLink data={moreInfo} />
           </TableRow>
         );
       })}

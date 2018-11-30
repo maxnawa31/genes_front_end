@@ -4,7 +4,7 @@ import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 import WithLoading from './WithLoading';
 
-const SearchResultsWithLoading = WithLoading(SearchResults);
+export const SearchResultsWithLoading = WithLoading(SearchResults);
 
 class App extends Component {
   constructor(props) {

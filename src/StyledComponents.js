@@ -23,17 +23,26 @@ export const StyledDiv = styled.div`
 export const StyledUl = styled.ul`
   flex: auto;
   padding-bottom: 0px;
+  position: fixed;
+  z-index: 400;
+  /* backface-visibility: visible; */
+  /* background-attachment: fixed; */
+  background-color: #003E7E;
+  margin: 0;
+  width: 260px;
+  padding-left: 0px;
 `;
 
 export const StyledLi = styled.li`
   line-height: 22px;
   display: flex;
-  width: 100%;
+  max-width: 100%;
   min-width: 0;
   max-height: none;
-  padding: 0;
+  color: white;
+  padding-left: 10px;
   &:hover {
-    background-color: #58f0b4;
+    background-color: #000000;
   }
 `;
 
@@ -46,7 +55,13 @@ export const StyledTable = styled.table`
 `;
 
 export const StyledRow = styled.tr`
-  background-color: #58f0b4;
+  background-color: #003E7E;
+  color: white;
 `;
 
-export const StyledTableData = styled.th``;
+export const StyledTableData = styled.td``;
+
+export const StyledTableDataLink = styled.a`
+  text-decoration: none;
+  color: white;
+`;
